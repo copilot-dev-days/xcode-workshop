@@ -16,6 +16,7 @@ This repository contains a simple SwiftUI demo app based on [Apple's SwiftUI tut
 
 ## Prerequisites
 
+
 Before starting the workshop, ensure you have:
 
 - **Xcode 15 or later** installed
@@ -24,53 +25,49 @@ Before starting the workshop, ensure you have:
 
 ### Installation & Setup
 
-#### 1. Download and Install
+#### 1. Install GitHub Copilot for Xcode
 
-Download the latest `.dmg` file from the [releases page](https://github.com/github/CopilotForXcode/releases) and drag **GitHub Copilot for Xcode** into your Applications folder.
+Download the latest `.dmg` from the [releases page](https://github.com/github/CopilotForXcode/releases) and drag the app into **Applications**.
 
-#### 2. Grant Permissions
+#### 2. Background Item
 
-Open the **GitHub Copilot for Xcode** application from the Applications folder. Three permissions are required:
+A background item will be added to enable the GitHub Copilot for Xcode extension app to connect to the host app. This permission is usually automatically added when first launching the app.
 
-- **Background Items**: Usually added automatically when first launching
-- **Accessibility**: You'll be prompted to grant this permission on first launch
-- **Xcode Source Editor Extension**: Must be enabled manually
-  1. Click **Extension Permission** in the GitHub Copilot app settings
-  2. In System Settings → Extensions → Xcode Source Editor
-  3. Enable **GitHub Copilot**
+#### 3. Grant Required Permissions
 
-#### 3. Verify Installation in Xcode
+Grant the required permissions: **Background**, **Accessibility**, and **Xcode Source Editor Extension**.
 
-Open Xcode and verify the **GitHub Copilot** menu appears under **Editor** menu.
+- **Background**: Done in the previous step.
+- **Accessibility**: The first time the application runs, a permission prompt will appear.
+- **Xcode Source Editor Extension**: This must be enabled manually. Click **Extension Permission** from the GitHub Copilot for Xcode application settings to open the System Preferences to the Extensions panel. Select **Xcode Source Editor** and enable **GitHub Copilot**.
 
-**Tip**: Disable Xcode's built-in predictive code completion under **Xcode → Settings → Text Editing → Editing** to avoid conflicts.
+#### 5. Sign In to GitHub Copilot
 
-#### 4. Sign In to GitHub Copilot
+**Option A (menu bar)**
+1. Click the **Copilot** icon in the macOS menu bar
+2. Choose **Sign in to GitHub Account**
+3. Authorize in the browser when prompted
 
-1. Click the **Sign in** button in the GitHub Copilot settings app
-2. A browser window will open and a code will be copied to your clipboard
-3. Paste the code into the GitHub login page and authorize
+**Option B (app → chat panel)**
+1. Run the **GitHub Copilot for Xcode** app
+2. In the Copilot Chat panel that appears, click **Sign in**
+3. Authorize in the browser when prompted
 
-#### 5. Open This Workshop Project
+#### 6. Open This Workshop Project
 
 Clone this repository and open in Xcode:
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/copilot-xcode-workshop.git
+git clone https://github.com/silenceJialuo/copilot-xcode-workshop.git
 cd copilot-xcode-workshop
 open Landmarks.xcodeproj
 ```
 
-> **Note**: Replace `<YOUR_GITHUB_USERNAME>` with your actual GitHub username, or use the repository URL provided by your workshop instructor.
+#### 8. Open Copilot Chat
 
-#### 6. Open Copilot Chat
-
-You can open Copilot Chat in two ways:
+The Copilot Chat panel should already be open by default. If you don't see it, you can open it in two ways:
 - **Via Xcode menu**: Xcode → Editor → GitHub Copilot → Open Chat
 - **Via GitHub Copilot app menu**: Click the menu bar icon → Open Chat
-
-**Keyboard Shortcuts**: You can set custom keyboard shortcuts in Xcode → Settings → Key Bindings
-
 
 
 ---
@@ -86,18 +83,15 @@ You can open Copilot Chat in two ways:
 1. Open the Landmarks project in Xcode
 2. Navigate to **ContentView.swift**
    Path: `Landmarks/Views/ContentView.swift`
-3. Open the **Copilot Chat** panel:
-   - Via Xcode menu: **Xcode → Editor → GitHub Copilot → Open Chat**
-   - Or via GitHub Copilot app menu bar icon → **Open Chat**
-4. **Select a model**: In the chat input area, look for the model selector (to the right of the wrench/settings icon), click it and choose your preferred model (e.g., GPT-4, Claude Sonnet, etc.)
+3. Open the **Copilot Chat** panel (see  **Installation & Setup** step)
+4. **Select a model**: In the chat input area, look for the model selector (to the right of the wrench/settings icon), click it and choose the model you want. If **GPT-5 mini** is available, you can try that first.
    - Different models may provide different response styles and capabilities
    - You can experiment with different models to see which works best for you
-5. Select **Ask** mode from the mode dropdown
+5. Select **Ask** mode using the mode toggle
 6. Try these prompts:
    - `Explain what this file does`
    - `What SwiftUI components are used in this view?`
-   - `How does the navigation work in this app?`
-
+ 
 **Expected Result**: Copilot provides clear explanations of the code structure and functionality.
 
 **Tips**:
@@ -165,15 +159,14 @@ outline heart for not favorited) across all views in the project.
 
 5. Copilot will analyze the codebase and propose changes to multiple files
 6. Review the proposed changes in the diff view
-7. Click **Accept** to apply all changes
-8. Check the Preview Canvas to see the updated UI
+7. Check the Preview Canvas to see the updated UI
 
 **What Happened?**
 - Agent Mode identified all files with favorite functionality
 - It updated icons consistently across `LandmarkRow`, `LandmarkDetail`, and other views
 - Changes were made simultaneously across multiple files
 
-**Try More Complex Tasks**:
+**Try More Complex Tasks** (Optional):
 - `Add a rating system (1-5 stars) to landmarks with mock data`
 - `Implement a dark mode toggle in the settings view`
 - `Add categories filter chips at the top of the landmark list`
@@ -189,7 +182,7 @@ outline heart for not favorited) across all views in the project.
 **Steps**:
 
 1. Open the Copilot Chat panel
-2. Select **Plan** mode (if available) or use Agent mode
+2. In the Copilot Chat panel, use the mode dropdown to select **Plan**
 3. Enter this prompt:
 
 ```
@@ -229,15 +222,14 @@ MCP allows Copilot to interact with external tools and services. The GitHub MCP 
 #### Setup GitHub MCP Server
 
 1. Open the **Copilot Chat** panel
-2. Click the **Configure MCP Server** button (wrench icon) in the chat toolbar
+2. Click the **wrench** icon to open Settings (it opens the **Tools** tab)
 3. In the MCP settings:
    - Click **Browse MCP Servers**
    - Find and select **GitHub** from the registry
    - Click **Install**
 4. Authenticate with GitHub when prompted
 5. Select the GitHub account/organization you want to grant access to
-6. Return to Copilot Chat and open the **Tools** tab
-7. Verify that the GitHub MCP Server appears in the available tools list
+6. In the **Tools** tab, the **Available MCP Tools** list will update automatically—confirm the GitHub MCP Server appears there
 
 #### Using GitHub MCP Server
 
@@ -255,12 +247,7 @@ What are the open pull requests in this project?
 
 **More Things You Can Try** (Optional):
 - `Show me recent issues in the <repository-name> repository`
-- `Create a GitHub issue for this bug with a detailed description` (select code first)
-- `Summarize the changes in PR #<number>`
-- `What files were modified in the latest pull request?`
-- Ask Copilot to search across your organization's repositories
-- Query GitHub Actions workflow status
-- Generate release notes from commits
+- `Generate release notes from commits`
 
 ---
 
@@ -309,9 +296,7 @@ Make it responsive for different screen sizes.
 
 **Example Prompts with Vision**:
 - `Create this card component in SwiftUI with proper spacing, shadows, and rounded corners`
-- `Implement this custom navigation bar design with SF Symbols icons`
 - `Build a settings panel based on this screenshot, matching the iOS native style`
-- `Design a custom tab bar like the one in this image`
 
 **Tips for Better Results**:
 - Use clear, high-resolution images or screenshots
@@ -369,37 +354,11 @@ Make it responsive for different screen sizes.
   - `/doc` - Generate documentation
 - **Ask Follow-ups**: Treat it like a conversation with a senior developer
 
-### Keyboard Shortcuts
-
-- **Accept Suggestion**: Tab
-- **Dismiss Suggestion**: Esc
-- **Next Suggestion**: Option + ]
-- **Previous Suggestion**: Option + [
-- **Open Chat**: Click Copilot icon or use configured shortcut
-
----
 
 ## Troubleshooting
 
-### Copilot Not Showing Suggestions
-
-- Verify you're signed in to GitHub Copilot
-- Check that Copilot is enabled in Xcode menu bar
-- Ensure the file type is supported (.swift, .m, .h, etc.)
-- Try restarting Xcode
-
-### Poor Suggestion Quality
-
-- Provide more context with comments
-- Check that your file has clear structure and naming
-- Select relevant code before using chat
-- Try rephrasing your prompt
-
-### Agent Mode Not Working
-
-- Ensure you have the latest version of Copilot for Xcode
-- Verify your Copilot subscription includes agent features
-- Check for error messages in the chat panel
+Please refer to the official guide:
+- [TROUBLESHOOTING.md](https://github.com/github/CopilotForXcode/blob/main/TROUBLESHOOTING.md)
 
 ---
 
