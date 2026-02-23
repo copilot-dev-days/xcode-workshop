@@ -58,7 +58,7 @@ Grant the required permissions: **Background**, **Accessibility**, and **Xcode S
 Clone this repository and open in Xcode:
 
 ```bash
-git clone https://github.com/silenceJialuo/copilot-xcode-workshop.git
+git clone https://github.com/copilot-dev-days/xcode-workshop.git
 cd copilot-xcode-workshop
 open Landmarks.xcodeproj
 ```
