@@ -1,6 +1,6 @@
 # Landmarks — GitHub Copilot for Xcode Workshop
 
-[📚 Lab Guide](.lab/GUIDE.md)
+[📚 Lab Guide](workshop/GUIDE.md)
 
 ---
 
@@ -12,17 +12,17 @@
 
 | Part | Title |
 |------|-------|
-| [**00**](.lab/00-overview.md) | Overview & Checklist |
-| [**01**](.lab/01-setup.md) | Prerequisites & Setup |
-| [**02**](.lab/02-chat.md) | Understanding Code with Copilot Chat |
-| [**03**](.lab/03-completion.md) | Code Completion with Inline Suggestions |
-| [**04**](.lab/04-agent-mode.md) | Agent Mode — Multi-File Refactoring |
-| [**05**](.lab/05-plan-agent.md) | Plan Agent — Breaking Down Complex Tasks |
-| [**06**](.lab/06-mcp.md) | GitHub MCP Server Integration |
-| [**07**](.lab/07-vision.md) | Copilot Vision (Optional) |
-| [**08**](.lab/08-tips-and-resources.md) | Best Practices, Tips & Resources |
+| [**00**](workshop/00-overview.md) | Overview & Checklist |
+| [**01**](workshop/01-setup.md) | Prerequisites & Setup |
+| [**02**](workshop/02-chat.md) | Understanding Code with Copilot Chat |
+| [**03**](workshop/03-completion.md) | Code Completion with Inline Suggestions |
+| [**04**](workshop/04-agent-mode.md) | Agent Mode — Multi-File Refactoring |
+| [**05**](workshop/05-plan-agent.md) | Plan Agent — Breaking Down Complex Tasks |
+| [**06**](workshop/06-mcp.md) | GitHub MCP Server Integration |
+| [**07**](workshop/07-vision.md) | Copilot Vision (Optional) |
+| [**08**](workshop/08-tips-and-resources.md) | Best Practices, Tips & Resources |
 
-> 📝 Lab guides are also available in the [`.lab/`](.lab/) folder for offline reading.
+> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
 
 ---
 
