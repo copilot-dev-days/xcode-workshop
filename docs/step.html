@@ -147,17 +147,26 @@
 
     <script>
         const steps = [
-            { id: 'readme', file: 'README.md', title: 'Workshop Guide', number: '📚' },
+            { id: 'guide', file: 'GUIDE.md', title: 'Quick Reference', number: '📚' },
+            { id: '00-overview', file: '00-overview.md', title: 'Overview & Checklist', number: '00' },
+            { id: '01-setup', file: '01-setup.md', title: 'Prerequisites & Setup', number: '01' },
+            { id: '02-chat', file: '02-chat.md', title: 'Copilot Chat', number: '02' },
+            { id: '03-completion', file: '03-completion.md', title: 'Code Completion', number: '03' },
+            { id: '04-agent-mode', file: '04-agent-mode.md', title: 'Agent Mode', number: '04' },
+            { id: '05-plan-agent', file: '05-plan-agent.md', title: 'Plan Agent', number: '05' },
+            { id: '06-mcp', file: '06-mcp.md', title: 'MCP Server', number: '06' },
+            { id: '07-vision', file: '07-vision.md', title: 'Copilot Vision', number: '07' },
+            { id: '08-tips-and-resources', file: '08-tips-and-resources.md', title: 'Tips & Resources', number: '🎉' },
         ];
 
         const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
-        const GITHUB_RAW_BASE = isLocal ? '../' : 'https://raw.githubusercontent.com/copilot-dev-days/xcode-workshop/main/';
+        const GITHUB_RAW_BASE = isLocal ? '../.lab/' : 'https://raw.githubusercontent.com/copilot-dev-days/xcode-workshop/main/.lab/';
 
         let currentStepIndex = 0;
 
         function getStepFromURL() {
             const params = new URLSearchParams(window.location.search);
-            return params.get('step') || 'readme';
+            return params.get('step') || '00-overview';
         }
 
         function buildSidebar() {
@@ -207,11 +216,21 @@
                 </div>\n`;
             });
 
+            // Remove header/footer nav lines from markdown (we have our own sidebar/footer nav)
+            md = md.replace(/\[📚 Lab Guide\][^\n]+\n+---/g, '');
+            md = md.replace(/\[📚 Lab Guide\][^\n]+/g, '');
+            md = md.replace(/👉 \*\*\[Continue to[^\n]+/g, '');
+            md = md.replace(/👉 \*\*\[Start with[^\n]+/g, '');
+
             // Convert internal .md links to step.html links
-            steps.forEach(step => {
-                const regex = new RegExp(`\\(${step.file}\\)`, 'g');
-                md = md.replace(regex, `(step.html?step=${step.id})`);
-            });
+            md = md.replace(/\]\((\d+)-([^)]+)\.md\)/g, '](step.html?step=$1-$2)');
+            md = md.replace(/\]\(GUIDE\.md\)/g, '](step.html?step=guide)');
+
+            // Convert links to parent README
+            md = md.replace(/\]\(\.\.\/README\.md\)/g, '](index.html)');
+
+            // Clean up multiple consecutive horizontal rules
+            md = md.replace(/---\s*\n\s*---/g, '---');
 
             return md;
         }
