@@ -67,9 +67,3 @@ You've set up:
 - Required permissions (Background, Accessibility, Source Editor)
 - GitHub authentication
 - The workshop project in Xcode with Copilot Chat open
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Overview](00-overview.md)
-
-👉 **[Continue to Part 2: Understanding Code with Copilot Chat →](02-chat.md)**

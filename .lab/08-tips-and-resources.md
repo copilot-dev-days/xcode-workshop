@@ -95,9 +95,3 @@ Found issues or have suggestions for improving this workshop?
 ## 🎉 Workshop Complete!
 
 Congratulations! You've completed the **GitHub Copilot for Xcode Workshop**!
-
-Happy coding with GitHub Copilot for Xcode! 🚀
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Vision](07-vision.md) • [← README](../README.md)

@@ -82,9 +82,3 @@
 - [GitHub Copilot Documentation](https://docs.github.com/copilot)
 - [Apple SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui)
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
-
----
-
-[← README](../README.md)
-
-*Happy Coding with GitHub Copilot for Xcode! 🚀*

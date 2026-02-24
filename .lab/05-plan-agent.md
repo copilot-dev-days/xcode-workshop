@@ -51,9 +51,3 @@ You've learned how to:
 - Use Plan mode to decompose complex features
 - Review and refine AI-generated plans
 - Execute plans step by step
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Agent Mode](04-agent-mode.md)
-
-👉 **[Continue to Part 6: MCP Server Integration →](06-mcp.md)**

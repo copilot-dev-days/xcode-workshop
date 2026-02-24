@@ -87,9 +87,3 @@ You've learned how to:
 - Upload design mockups to Copilot Chat
 - Generate SwiftUI code from visual designs
 - Iterate on vision-generated code for better results
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← MCP Server](06-mcp.md)
-
-👉 **[Continue to Part 8: Best Practices, Tips & Resources →](08-tips-and-resources.md)**

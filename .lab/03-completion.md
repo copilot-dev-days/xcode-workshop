@@ -49,9 +49,3 @@ You've learned how to:
 - Trigger inline code suggestions with comments
 - Accept suggestions with Tab
 - Guide Copilot with descriptive comments
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Chat](02-chat.md)
-
-👉 **[Continue to Part 4: Agent Mode →](04-agent-mode.md)**

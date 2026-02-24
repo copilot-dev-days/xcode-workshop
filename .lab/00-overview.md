@@ -69,13 +69,3 @@ After completing this workshop, you should be able to:
 2. **Commit often** — Save working states frequently
 3. **Use Cmd + Z** — Revert unexpected changes quickly
 4. **📌 Pin this guide** — Keep it visible while you work
-
----
-
-## 🚀 Ready?
-
-👉 **[Start with Part 1: Prerequisites & Setup](01-setup.md)**
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← README](../README.md)

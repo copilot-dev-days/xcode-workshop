@@ -46,9 +46,3 @@ You've learned how to:
 - Use Ask mode to explore codebases
 - Ask follow-up questions for deeper understanding
 - Use `@workspace` for project-wide queries
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Setup](01-setup.md)
-
-👉 **[Continue to Part 3: Code Completion →](03-completion.md)**

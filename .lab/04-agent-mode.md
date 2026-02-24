@@ -51,9 +51,3 @@ You've learned how to:
 - Use Agent Mode for multi-file refactoring
 - Review proposed changes in the diff view
 - Verify changes with the Preview Canvas
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Completion](03-completion.md)
-
-👉 **[Continue to Part 5: Plan Agent →](05-plan-agent.md)**

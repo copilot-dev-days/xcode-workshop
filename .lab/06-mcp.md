@@ -54,9 +54,3 @@ You've learned how to:
 - Install the GitHub MCP Server
 - Authenticate and configure MCP tools
 - Query repositories and pull requests from Copilot Chat
-
----
-
-[📚 Lab Guide](GUIDE.md) • [← Plan Agent](05-plan-agent.md)
-
-👉 **[Continue to Part 7: Copilot Vision →](07-vision.md)**
