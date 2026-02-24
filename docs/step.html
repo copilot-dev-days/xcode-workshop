@@ -117,11 +117,14 @@
             .footer-nav-next { text-align: left; margin-left: 0; }
         }
     </style>
+    <link rel="stylesheet" href="light-theme.css">
+    <script src="theme-toggle.js"></script>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="header-brand">🍎 Copilot for Xcode Workshop</a>
         <div class="header-nav">
+            <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
             <button id="prev-btn" onclick="navigateStep(-1)" disabled>← Prev</button>
             <button id="next-btn" onclick="navigateStep(1)" disabled>Next →</button>
         </div>
